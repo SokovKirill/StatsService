@@ -1,45 +1,54 @@
 package ru.netology;
 
 public class StatsService {
-    public long maxSales(long[] sales) {
-        long maxMonth = 0;
-        long month = sales[0];
-        for (long sale : sales) {
-            if (month >= sale) {
-                maxMonth = month;
-            }
-            month = month + 1;
-        }
-        return (maxMonth + 1);
-    }
 
-    public long calculateSum(long[] sales) {
-        long sum = 0;
-        for (long sale : sales) {
+    public int Sum(int[] sales) {
+        int sum = 0;
+        for (int sale : sales) {
             sum += sale;
         }
         return sum;
     }
-
-    public long minSales(long[] sales) {
-        long minMonth = 0;
-        long month = sales[0];
-        for (long sale : sales) {
-            if (month <= sales [(int) minMonth]) {
+    public int Avg(int[] sales) {
+        return Sum(sales) / sales.length;
+    }
+    public int maxSales(int[] sales) {
+        int minMonth = 0;
+        int month = 0;
+        for (int sale : sales) {
+            if (sale >= sales[minMonth]) {
                 minMonth = month;
             }
-            month = month + 1;
+            month++;
         }
-        return (minMonth + 1);
+        return minMonth + 1;
     }
-    public long calculateMiddleSum(long[] sales) {
-        long sum = 0;
-        long month = sales[0];
-        for (long sale : sales) {
-            sum += sale;
-
+    public int minSales(int[] sales) {
+        int minMonth = 0;
+        int month = 0;
+        for (int sale : sales) {
+            if (sale <= sales[minMonth]) {
+                minMonth = month;
+            }
+            month++;
         }
-        return sum/12;
+        return minMonth + 1;
     }
-
-}
+//    public int calculateBelowMidSum(int[] sales) {
+//        int Avg = Avg(sales);
+//        int monthCount = 0;
+//     for (int sale : sales);
+//     if (sale < Avg) {
+//         monthCount++;
+//     }
+//      return monthCount;
+//    }
+//    public int calculateAboveMidSum(int[] sales) {
+//        int Avg = Avg(sales);
+//        int monthCount = 0;
+//        for (int sale : sales);
+//    if (sale > Avg) {
+//            monthCount++;
+//        }
+//        return monthCount;
+    }
