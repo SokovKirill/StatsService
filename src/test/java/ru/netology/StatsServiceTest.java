@@ -29,14 +29,14 @@ import static org.junit.jupiter.api.Assertions.*;
        void Avg() {
            assertEquals(15, service.Avg(sales));
        }
-   }
 
-//      @Test
-//        void calculateBelowMidSum() {
-//            assertEquals(5, service.calculateBelowMidSum(sales));
-//        }
-//       @Test
-//       void calculateAboveMidSum() {
-//           assertEquals(5, service.calculateAboveMidSum(sales));
-//       }
-//}
+      @Test
+        void AboveMidSum() {
+            assertEquals(5, service.AboveMidSum(sales));
+       }
+
+       @Test
+       void BelowMidSum() {
+           assertEquals(5, service.BelowMidSum(sales));
+       }
+}
