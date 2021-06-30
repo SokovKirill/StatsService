@@ -15,8 +15,8 @@ import static org.junit.jupiter.api.Assertions.*;
        }
 
        @Test
-       void Sum() {
-           assertEquals(180, service.Sum(sales));
+       void sum() {
+           assertEquals(180, service.sum(sales));
        }
 
        @Test
@@ -26,17 +26,17 @@ import static org.junit.jupiter.api.Assertions.*;
        }
 
        @Test
-       void Avg() {
-           assertEquals(15, service.Avg(sales));
+       void avg() {
+           assertEquals(15, service.avg(sales));
        }
 
       @Test
-        void AboveMidSum() {
-            assertEquals(5, service.AboveMidSum(sales));
+        void aboveMidSum() {
+            assertEquals(5, service.aboveMidSum(sales));
        }
 
        @Test
-       void BelowMidSum() {
-           assertEquals(5, service.BelowMidSum(sales));
+       void belowMidSum() {
+           assertEquals(5, service.belowMidSum(sales));
        }
 }
